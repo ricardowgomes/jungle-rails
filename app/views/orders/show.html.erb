@@ -19,7 +19,6 @@
       </tr>
     </thead>
     <tbody>
-    <%= @order.line_items.inspect %>
       <% @order.line_items.each do |item| %>
         <%= render 'order', item: item %>
       <% end %>
