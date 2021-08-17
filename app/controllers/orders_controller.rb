@@ -1,4 +1,9 @@
 class OrdersController < ApplicationController
+  def index
+    @orders = Order.all.order(created_at: :desc)
+    puts @orders
+    @orders
+  end
 
   def show
     @order = Order.find(params[:id])
