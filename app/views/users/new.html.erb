@@ -1,0 +1,20 @@
+<header class="page-header">
+<h1>Signup!</h1>
+</header>
+
+<% flash.each do |type, msg| %>
+  <div class = "alert alert-warning">
+    <%= "Sorry, #{msg.keys.first} #{msg.values.first.first}!" %>
+  </div>
+<% end %>
+<div class="login-sign">
+<%= form_for :user, url: '/users' do |f| %>
+
+  Name: <%= f.text_field :name %>
+  Email: <%= f.text_field :email %>
+  Password: <%= f.password_field :password %>
+  Password Confirmation: <%= f.password_field :password_confirmation %>
+  <%= f.submit "Submit" %>
+
+<% end %>
+</div>
