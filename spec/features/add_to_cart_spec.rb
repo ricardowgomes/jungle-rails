@@ -21,7 +21,6 @@ RSpec.feature "Visitor add product to cart", type: :feature, js: true do
     # ACT
     visit root_path
     find("button[class='btn btn-primary']", visible: false, match: :first).click
-    save_screenshot
 
     # DEBUG
     # save_screenshot
